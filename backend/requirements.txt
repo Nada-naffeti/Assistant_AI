@@ -1,0 +1,33 @@
+# --- Framework & Serveur ---
+fastapi
+uvicorn
+
+# --- Communication & API ---
+pydantic
+python-dotenv
+fastapi-cors
+
+# --- LangChain ---
+langchain
+langchain-groq
+langchain-community
+
+# --- Traitement d'Image ---
+transformers
+torch
+Pillow
+
+# --- Traitement de Documents ---
+docling  
+
+
+# --- Stockage & Cloud ---
+vercel-blob
+
+# --- Utilitaires ---
+os
+json
+shutil
+subprocess
+uuid
+typing

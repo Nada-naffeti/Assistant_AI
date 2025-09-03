@@ -1,0 +1,30 @@
+.env
+__pycache__/
+.mypy_cache/
+*.log
+*.aux
+*.out
+*.pdf
+*.tex
+*.key
+*.pem
+config.json
+# Python
+__pycache__/
+*.pyc
+.mypy_cache/
+
+# Node / Frontend
+frontend/node_modules/
+
+# Backend
+backend/node_modules/
+backend/.env
+backend/config.json
+backend/latex_build/
+
+# OS / IDE
+*.log
+*.tmp
+*.DS_Store
+.vscode/
