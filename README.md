@@ -62,10 +62,10 @@ TechnologieRôleLaTeX / xelatexGénération de rapports PDF structurésVercel Bl
 **🚀 Installation**
 Prérequis
 
-Python 3.12+
+```Python 3.12+
 Node.js 18+
 LaTeX avec xelatex (Installation TeX Live)
-
+```
 *1. Cloner le projet*
 
 ```bashgit clone https://github.com/Nada-naffeti/Assistant_AI.git
@@ -81,9 +81,10 @@ uvicorn main:app --reload
 ```
 *3. Frontend*
 
-bashcd frontend
+```bashcd frontend
 npm install
 npm run dev
+```
 L'application est disponible sur http://localhost:3000.
 
 **🔐 Variables d'environnement**
