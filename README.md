@@ -53,12 +53,12 @@ TechnologieRôleLaTeX / xelatexGénération de rapports PDF structurésVercel Bl
 
 **📁 Structure du projet**
 
-Assistant_AI/
+```Assistant_AI/
 ├── backend/          # API FastAPI + agents IA (Python)
 ├── frontend/         # Application Next.js (TypeScript)
 ├── .gitignore
 └── README.md
-
+```
 **🚀 Installation**
 Prérequis
 
@@ -67,15 +67,18 @@ Node.js 18+
 LaTeX avec xelatex (Installation TeX Live)
 
 *1. Cloner le projet*
-bashgit clone https://github.com/Nada-naffeti/Assistant_AI.git
-cd Assistant_AI
+
+```bashgit clone https://github.com/Nada-naffeti/Assistant_AI.git
+cd Assistant_AI```
 *2. Backend*
+
 bashcd backend
-python -m venv venv
+```python -m venv venv
 source venv/bin/activate        # Windows : venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn main:app --reload
+uvicorn main:app --reload```
 *3. Frontend*
+
 bashcd frontend
 npm install
 npm run dev
@@ -83,12 +86,16 @@ L'application est disponible sur http://localhost:3000.
 
 **🔐 Variables d'environnement**
 
-Créez un fichier .env dans chaque dossier. Ne commitez jamais ce fichier — il est déjà dans le .gitignore.
+Créez un fichier .env dans chaque dossier. 
+Ne commitez jamais ce fichier — il est déjà dans le .gitignore.
+
 *backend/.env*
-envGROQ_API_KEY=your_groq_api_key
+
+```envGROQ_API_KEY=your_groq_api_key
 HUGGINGFACE_TOKEN=your_hf_token
-VERCEL_BLOB_READ_WRITE_TOKEN=your_vercel_blob_token
+VERCEL_BLOB_READ_WRITE_TOKEN=your_vercel_blob_token```
 *frontend/.env*
-envNEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+
+```envNEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 CLERK_SECRET_KEY=your_clerk_secret_key
-NEXT_PUBLIC_API_URL=http://localhost:8000
+NEXT_PUBLIC_API_URL=http://localhost:8000```
