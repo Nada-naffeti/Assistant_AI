@@ -13,22 +13,11 @@ Sujet aux erreurs — incohérences documentaires, saisies manuelles
 
 **🎥 Vue d'ensemble du pipeline**
 Le système guide l'assuré à travers un pipeline d'agents IA orchestrés, du premier message jusqu'au rapport final.
-[Assuré — Interface chatbot]
-          │
-          ▼
-  ┌───────────────────┐
-  │   Orchestrateur   │  ← cerveau du pipeline
-  └──┬──────┬────┬────┘
-     │      │    │
-     ▼      ▼    ▼
- Guardrail  Analyste  Estimateur
- (validation) (docs+img) (coûts)
-                          │
-                          ▼
-               Générateur LaTeX
-                          │
-                          ▼
-              FastAPI → xelatex → 📄 PDF
+1. Assuré (chatbot)
+2. Orchestrateur
+3. Guardrail → Analyste → Estimateur
+4. Générateur LaTeX
+5. FastAPI → PDF
 
 **🛠️ Comment ça marche**
 
@@ -52,13 +41,13 @@ Rapport : le pipeline génère automatiquement un rapport PDF structuré via LaT
 
 
 **🧰 Stack technique**
-Backend
+*Backend*
 TechnologieRôlePython 3.12Langage principalFastAPIAPI REST asynchroneUvicornServeur ASGIPydanticValidation & sérialisation des donnéesPillow (PIL)Traitement des images avant analyse IA
-Frontend
+*Frontend*
 TechnologieRôleNext.js 14 (React)Framework web moderneTypeScriptTypage statiqueTailwind CSS / Shadcn/uiDesign professionnel & responsiveLucide ReactBibliothèque d'icônesClerkAuthentification & gestion utilisateurs
-Intelligence Artificielle
+*Intelligence Artificielle*
 TechnologieRôleLangChainOrchestration du pipeline des agents IAGroq API (Llama)LLM ultra-rapide pour la réactivité du chatbotHugging Face / BLIPModèle de vision pour l'analyse d'images
-Outils & Infrastructure
+*Outils & Infrastructure*
 TechnologieRôleLaTeX / xelatexGénération de rapports PDF structurésVercel BlobStockage cloud et partage des rapportsDoclingExtraction de texte depuis PDF et DOCX
 
 **📁 Structure du projet**
