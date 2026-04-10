@@ -12,6 +12,7 @@ Sujet aux erreurs — incohérences documentaires, saisies manuelles
 
 
 **🎥 Vue d'ensemble du pipeline**
+
 Le système guide l'assuré à travers un pipeline d'agents IA orchestrés, du premier message jusqu'au rapport final.
 1. Assuré (chatbot)
 2. Orchestrateur
@@ -51,6 +52,7 @@ TechnologieRôleLangChainOrchestration du pipeline des agents IAGroq API (Llama)
 TechnologieRôleLaTeX / xelatexGénération de rapports PDF structurésVercel BlobStockage cloud et partage des rapportsDoclingExtraction de texte depuis PDF et DOCX
 
 **📁 Structure du projet**
+
 Assistant_AI/
 ├── backend/          # API FastAPI + agents IA (Python)
 ├── frontend/         # Application Next.js (TypeScript)
@@ -80,6 +82,7 @@ npm run dev
 L'application est disponible sur http://localhost:3000.
 
 **🔐 Variables d'environnement**
+
 Créez un fichier .env dans chaque dossier. Ne commitez jamais ce fichier — il est déjà dans le .gitignore.
 *backend/.env*
 envGROQ_API_KEY=your_groq_api_key
