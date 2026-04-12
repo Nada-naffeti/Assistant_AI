@@ -33,14 +33,21 @@ Rapport : le pipeline génère automatiquement un rapport PDF structuré via LaT
 
 **✨ Fonctionnalités**
 
- Chatbot conversationnel pas-à-pas pour l'assuré
- Analyse d'images de sinistre par vision IA (BLIP)
- Extraction de texte depuis PDF et DOCX (Docling)
- Vérification automatique de la cohérence des preuves
- Estimation automatisée des coûts de réparation
- Génération d'un rapport PDF en LaTeX
- Hébergement cloud du rapport via Vercel Blob
- Authentification sécurisée avec Clerk
+ -Chatbot conversationnel pas-à-pas pour l'assuré
+ 
+ -Analyse d'images de sinistre par vision IA (BLIP)
+ 
+ -Extraction de texte depuis PDF et DOCX (Docling)
+ 
+ -Vérification automatique de la cohérence des preuves
+ 
+ -Estimation automatisée des coûts de réparation
+ 
+ -Génération d'un rapport PDF en LaTeX
+ 
+ -Hébergement cloud du rapport via Vercel Blob
+ 
+ -Authentification sécurisée avec Clerk
 
 
 **🧰 Stack technique**
