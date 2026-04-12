@@ -4,7 +4,9 @@
 Le traitement des sinistres dans le secteur de l'assurance est aujourd'hui :
 
 Lent — procédures administratives longues et répétitives
+
 Coûteux — intervention humaine à chaque étape
+
 Sujet aux erreurs — incohérences documentaires, saisies manuelles
 
 
