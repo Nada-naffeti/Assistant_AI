@@ -55,12 +55,12 @@ Rapport : le pipeline génère automatiquement un rapport PDF structuré via LaT
 
 
 **🧰 Stack technique**
-```*Backend*
+*Backend*
 
 TechnologieRôlePython 3.12Langage principalFastAPIAPI REST asynchroneUvicornServeur ASGIPydanticValidation & sérialisation des donnéesPillow (PIL)Traitement des images avant analyse IA
-```
 
-```
+
+
 *Frontend*
 TechnologieRôleNext.js 14 (React)Framework web moderneTypeScriptTypage statiqueTailwind CSS / Shadcn/uiDesign professionnel & responsiveLucide ReactBibliothèque d'icônesClerkAuthentification & gestion utilisateurs
 
@@ -69,7 +69,7 @@ TechnologieRôleLangChainOrchestration du pipeline des agents IAGroq API (Llama)
 
 *Outils & Infrastructure*
 TechnologieRôleLaTeX / xelatexGénération de rapports PDF structurésVercel BlobStockage cloud et partage des rapportsDoclingExtraction de texte depuis PDF et DOCX
-```
+
 
 **📁 Structure du projet**
 
