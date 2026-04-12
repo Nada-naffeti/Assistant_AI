@@ -25,9 +25,13 @@ Le système guide l'assuré à travers un pipeline d'agents IA orchestrés, du p
 **🛠️ Comment ça marche**
 
 Conversation : le chatbot guide l'assuré et collecte la description du sinistre ainsi que les preuves (documents, photos).
+
 Validation : l'agent Guardrail vérifie la cohérence entre les documents fournis et la déclaration.
+
 Analyse : l'agent Analyste extrait la nature des dommages, la localisation et les informations clés.
+
 Estimation : l'agent Estimateur propose une première évaluation chiffrée des coûts de réparation.
+
 Rapport : le pipeline génère automatiquement un rapport PDF structuré via LaTeX et le stocke sur Vercel Blob.
 
 
