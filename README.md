@@ -1,127 +1,166 @@
- ***Assistant IA — Déclaration Intelligente de Sinistre***
+# AI Assistant — Automated Insurance Claim Declaration
 
-🔍 Problématique
-Le traitement des sinistres dans le secteur de l'assurance est aujourd'hui :
+An end-to-end AI-powered system that guides policyholders through the insurance claim process, from initial description to structured PDF report — automatically.
 
-Lent — procédures administratives longues et répétitives
+---
 
-Coûteux — intervention humaine à chaque étape
+## Problem Statement
 
-Sujet aux erreurs — incohérences documentaires, saisies manuelles
+Insurance claim processing is traditionally:
 
+- **Slow** — long and repetitive administrative procedures
+- **Costly** — human intervention required at every step
+- **Error-prone** — document inconsistencies and manual data entry
 
-**Comment utiliser l'IA Générative pour rendre ce processus plus rapide, plus fiable et moins coûteux ?**
+This project explores how Generative AI can make this process faster, more reliable, and less expensive.
 
+---
 
-**🎥 Vue d'ensemble du pipeline**
+## How It Works
 
-Le système guide l'assuré à travers un pipeline d'agents IA orchestrés, du premier message jusqu'au rapport final.
-1. Assuré (chatbot)
-2. Orchestrateur
-3. Guardrail → Analyste → Estimateur
-4. Générateur LaTeX
-5. FastAPI → PDF
+The system orchestrates a pipeline of AI agents that process the claim from the first message to the final report.
 
-**🛠️ Comment ça marche**
+```
+Policyholder (chatbot)
+    → Orchestrator
+        → Guardrail Agent     (document consistency check)
+        → Analyst Agent       (damage extraction & localization)
+        → Estimator Agent     (repair cost evaluation)
+    → LaTeX Generator
+        → FastAPI → PDF Report
+```
 
-Conversation : le chatbot guide l'assuré et collecte la description du sinistre ainsi que les preuves (documents, photos).
+1. **Conversation** — the chatbot collects the claim description and supporting evidence (documents, photos)
+2. **Validation** — the Guardrail agent checks consistency between uploaded documents and the declaration
+3. **Analysis** — the Analyst agent extracts damage type, location, and key information
+4. **Estimation** — the Estimator agent produces an initial repair cost evaluation
+5. **Report** — the pipeline auto-generates a structured PDF via LaTeX and stores it on Vercel Blob
 
-Validation : l'agent Guardrail vérifie la cohérence entre les documents fournis et la déclaration.
+---
 
-Analyse : l'agent Analyste extrait la nature des dommages, la localisation et les informations clés.
+## Features
 
-Estimation : l'agent Estimateur propose une première évaluation chiffrée des coûts de réparation.
+- Step-by-step conversational chatbot for the policyholder
+- AI vision analysis of damage images (BLIP)
+- Text extraction from PDF and DOCX files (Docling)
+- Automatic evidence consistency verification
+- Automated repair cost estimation
+- LaTeX-based structured PDF report generation
+- Cloud report hosting via Vercel Blob
+- Secure authentication with Clerk
 
-Rapport : le pipeline génère automatiquement un rapport PDF structuré via LaTeX et le stocke sur Vercel Blob.
+---
 
-
-**✨ Fonctionnalités**
-
- -Chatbot conversationnel pas-à-pas pour l'assuré
- 
- -Analyse d'images de sinistre par vision IA (BLIP)
- 
- -Extraction de texte depuis PDF et DOCX (Docling)
- 
- -Vérification automatique de la cohérence des preuves
- 
- -Estimation automatisée des coûts de réparation
- 
- -Génération d'un rapport PDF en LaTeX
- 
- -Hébergement cloud du rapport via Vercel Blob
- 
- -Authentification sécurisée avec Clerk
-
-
-***🧰 Stack technique***
+## Tech Stack
 
 **Backend**
 
-TechnologieRôlePython 3.12Langage principalFastAPIAPI REST asynchroneUvicornServeur ASGIPydanticValidation & sérialisation des donnéesPillow (PIL)Traitement des images avant analyse IA
+| Technology | Role |
+|---|---|
+| Python 3.12 | Main language |
+| FastAPI | Async REST API |
+| Uvicorn | ASGI server |
+| Pydantic | Data validation & serialization |
+| Pillow (PIL) | Image preprocessing |
 
 **Frontend**
 
-TechnologieRôleNext.js 14 (React)Framework web moderneTypeScriptTypage statiqueTailwind CSS / Shadcn/uiDesign professionnel & responsiveLucide ReactBibliothèque d'icônesClerkAuthentification & gestion utilisateurs
+| Technology | Role |
+|---|---|
+| Next.js 14 (React) | Web framework |
+| TypeScript | Static typing |
+| Tailwind CSS / Shadcn/ui | UI design |
+| Lucide React | Icon library |
+| Clerk | Authentication & user management |
 
-**Intelligence Artificielle**
+**AI**
 
-TechnologieRôleLangChainOrchestration du pipeline des agents IAGroq API (Llama)LLM ultra-rapide pour la réactivité du chatbotHugging Face / BLIPModèle de vision pour l'analyse d'images
+| Technology | Role |
+|---|---|
+| LangChain | AI agent pipeline orchestration |
+| Groq API (Llama) | Ultra-fast LLM for chatbot reactivity |
+| Hugging Face / BLIP | Vision model for image analysis |
 
-**Outils & Infrastructure**
+**Infrastructure**
 
-TechnologieRôleLaTeX / xelatexGénération de rapports PDF structurésVercel BlobStockage cloud et partage des rapportsDoclingExtraction de texte depuis PDF et DOCX
+| Technology | Role |
+|---|---|
+| LaTeX / xelatex | Structured PDF report generation |
+| Vercel Blob | Cloud storage & report sharing |
+| Docling | Text extraction from PDF and DOCX |
 
+---
 
-**📁 Structure du projet**
+## Project Structure
 
-```Assistant_AI/
-├── backend/          # API FastAPI + agents IA (Python)
-├── frontend/         # Application Next.js (TypeScript)
+```
+Assistant_AI/
+├── backend/       # FastAPI + AI agents (Python)
+├── frontend/      # Next.js application (TypeScript)
 ├── .gitignore
 └── README.md
 ```
-**🚀 Installation**
-Prérequis
 
-```Python 3.12+
-Node.js 18+
-LaTeX avec xelatex (Installation TeX Live)
-```
-*1. Cloner le projet*
+---
 
-```bashgit clone https://github.com/Nada-naffeti/Assistant_AI.git
+## Getting Started
+
+**Prerequisites**
+
+- Python 3.12+
+- Node.js 18+
+- LaTeX with xelatex ([TeX Live](https://www.tug.org/texlive/))
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/Nada-naffeti/Assistant_AI.git
 cd Assistant_AI
 ```
-*2. Backend*
 
-bashcd backend
-```python -m venv venv
-source venv/bin/activate        # Windows : venv\Scripts\activate
+**2. Backend**
+
+```bash
+cd backend
+source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
-*3. Frontend*
 
-```bashcd frontend
+**3. Frontend**
+
+```bash
+cd frontend
 npm install
 npm run dev
 ```
-L'application est disponible sur http://localhost:3000.
 
-**🔐 Variables d'environnement**
+The application runs at `http://localhost:3000`.
 
-Créez un fichier .env dans chaque dossier. 
-Ne commitez jamais ce fichier — il est déjà dans le .gitignore.
+---
 
-```backend/.env
+## Environment Variables
 
-envGROQ_API_KEY=your_groq_api_key
+Create a `.env` file in each folder. Never commit it — it is already in `.gitignore`.
+
+`backend/.env`
+```
+GROQ_API_KEY=your_groq_api_key
 HUGGINGFACE_TOKEN=your_hf_token
-VERCEL_BLOB_READ_WRITE_TOKEN=your_vercel_blob_token```
-frontend/.env
+VERCEL_BLOB_READ_WRITE_TOKEN=your_vercel_blob_token
+```
 
-envNEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+`frontend/.env`
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 CLERK_SECRET_KEY=your_clerk_secret_key
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
+
+---
+
+## Author
+
+**Nada Naffeti** — Data Science & AI Engineering Student @ [ESSAI](https://www.essai.tn/)
+
+[LinkedIn](https://linkedin.com/in/nada-naffeti) · [GitHub](https://github.com/Nada-naffeti)
