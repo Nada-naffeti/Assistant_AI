@@ -30,11 +30,11 @@ Policyholder (chatbot)
         → FastAPI → PDF Report
 ```
 
-1. **Conversation** — the chatbot collects the claim description and supporting evidence (documents, photos)
-2. **Validation** — the Guardrail agent checks consistency between uploaded documents and the declaration
-3. **Analysis** — the Analyst agent extracts damage type, location, and key information
-4. **Estimation** — the Estimator agent produces an initial repair cost evaluation
-5. **Report** — the pipeline auto-generates a structured PDF via LaTeX and stores it on Vercel Blob
+1. **Conversation** : the chatbot collects the claim description and supporting evidence (documents, photos)
+2. **Validation** : the Guardrail agent checks consistency between uploaded documents and the declaration
+3. **Analysis** : the Analyst agent extracts damage type, location, and key information
+4. **Estimation** : the Estimator agent produces an initial repair cost evaluation
+5. **Report** : the pipeline auto-generates a structured PDF via LaTeX and stores it on Vercel Blob
 
 ---
 
