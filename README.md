@@ -1,6 +1,6 @@
 # AI Assistant : Automated Insurance Claim Declaration
 
-An end-to-end AI-powered system that guides policyholders through the insurance claim process, from initial description to structured PDF report — automatically.
+An end-to-end AI-powered system that guides policyholders through the insurance claim process, from initial description to structured PDF report automatically.
 
 ---
 
