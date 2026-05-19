@@ -1,4 +1,4 @@
-# AI Assistant — Automated Insurance Claim Declaration
+# AI Assistant : Automated Insurance Claim Declaration
 
 An end-to-end AI-powered system that guides policyholders through the insurance claim process, from initial description to structured PDF report — automatically.
 
@@ -8,9 +8,9 @@ An end-to-end AI-powered system that guides policyholders through the insurance 
 
 Insurance claim processing is traditionally:
 
-- **Slow** — long and repetitive administrative procedures
-- **Costly** — human intervention required at every step
-- **Error-prone** — document inconsistencies and manual data entry
+- **Slow** : long and repetitive administrative procedures
+- **Costly** : human intervention required at every step
+- **Error-prone** : document inconsistencies and manual data entry
 
 This project explores how Generative AI can make this process faster, more reliable, and less expensive.
 
