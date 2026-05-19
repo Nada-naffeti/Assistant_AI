@@ -141,7 +141,7 @@ The application runs at `http://localhost:3000`.
 
 ## Environment Variables
 
-Create a `.env` file in each folder. Never commit it — it is already in `.gitignore`.
+Create a `.env` file in each folder. Never commit it it is already in `.gitignore`.
 
 `backend/.env`
 ```
